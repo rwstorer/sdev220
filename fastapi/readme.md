@@ -1,27 +1,28 @@
 # FastAPI
 
-## Setup
+## Virtual Environment
 
-- [ ] Create the virtual environment
+### Create the Virtual Environment
 
 `python -m venv ./venv`
 
-- [ ] Activate the virtual environment
-- Windows
+### Activate the Virtual Environment
+
+#### Windows Virtual Environment Activation
 
 `.\venv\scripts\activate.bat` (if using cmd.exe)  
 OR `.\venv\scripts\Activate.ps1` (if using PowerShell)
 
-- Linux and MacOS
+#### Linux and MacOS Virtual Environment Activation
 
 `./venv/bin/activate`
 
-- [ ] Confirm activation on the virtual environment
+### Confirm Virtual Environment Activation
 
 *(venv)* should show at the start of your current shell's command line  
 e.g. *(venv) C:\fastapi*
 
-- [ ] Install the modules for both fastapi and pydantic
+## Install Modules
 
-`pip install fastapi`  
-`pip install pydantic`
+1. `pip install fastapi`  
+2. `pip install pydantic`
