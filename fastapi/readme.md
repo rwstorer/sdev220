@@ -28,3 +28,19 @@ e.g. *(venv) C:\fastapi*
 2. `pip install pydantic`  
 3. `pip install sqlalchemy`  
 4. `pip install alembic`
+
+## Alembic
+
+## Initialize Alembic
+
+- Windows
+
+`.\venv\bin\alembic init alembic`
+
+- MacOS or Linux
+
+`./venv/bin/alembic init alembic`
+
+### Edit the Alembic INI File
+
+
