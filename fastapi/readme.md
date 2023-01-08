@@ -35,12 +35,17 @@ e.g. *(venv) C:\fastapi*
 
 - Windows
 
-`.\venv\bin\alembic init alembic`
+`.\venv\Scripts\alembic.exe init alembic`
 
 - MacOS or Linux
 
 `./venv/bin/alembic init alembic`
 
-### Edit the Alembic INI File
+### Alembic Settings
 
+1. Edit the alembic.ini file  
+I only changed the `sqlalchemy.url =` line to `sqlalchemy.url = sqlite3:///sqlite3.db` to use/create an sqlite3 database file
+relative to the current project folder.
 
+2. Create the initial Alembic revision  
+`alembic revision -m "create initial tables"`
