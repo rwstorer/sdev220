@@ -25,4 +25,6 @@ e.g. *(venv) C:\fastapi*
 ## Install Modules
 
 1. `pip install fastapi`  
-2. `pip install pydantic`
+2. `pip install pydantic`  
+3. `pip install sqlalchemy`  
+4. `pip install alembic`
