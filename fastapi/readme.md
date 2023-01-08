@@ -16,7 +16,7 @@ OR `.\venv\scripts\Activate.ps1` (if using PowerShell)
 
 - [ ] Confirm activation on the virtual environment
 
-*(venv)* should show at the start of your current shell's command line
+*(venv)* should show at the start of your current shell's command line  
 e.g. *(venv) C:\fastapi*
 
 - [ ] Install the modules for both fastapi and pydantic
