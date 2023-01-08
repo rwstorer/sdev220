@@ -1,4 +1,6 @@
-# FastAPI Setup
+# FastAPI
+
+## Setup
 
 - [ ] Create the virtual environment
 
