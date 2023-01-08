@@ -7,7 +7,7 @@
 - [ ] Activate the virtual environment
 - Windows
 
-`.\venv\scripts\activate.bat` (if using cmd.exe)
+`.\venv\scripts\activate.bat` (if using cmd.exe)  
 OR `.\venv\scripts\Activate.ps1` (if using PowerShell)
 
 - Linux and MacOS
@@ -21,5 +21,5 @@ e.g. *(venv) C:\fastapi*
 
 - [ ] Install the modules for both fastapi and pydantic
 
-`pip install fastapi`
+`pip install fastapi`  
 `pip install pydantic`
