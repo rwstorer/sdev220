@@ -48,4 +48,9 @@ I only changed the `sqlalchemy.url =` line to `sqlalchemy.url = sqlite3:///sqlit
 relative to the current project folder.
 
 2. Create the initial Alembic revision  
-`alembic revision -m "create initial tables"`
+`alembic revision -m "create initial tables"`  
+(Note the newly created Python file name and the path)
+
+3. Make the edits to the newly created Python file from the previous step  
+Since this is the first revision, you won't have any downgrade options--leave `pass` in for the downgrade function.
+Use the op.create_table() function to define your table and its columns per the SQLAlchemy documentation 
