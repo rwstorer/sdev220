@@ -27,3 +27,20 @@ while True:
     except:
         print(FLOAT_ERR)
 
+
+
+child_ages: dict = {
+    'Fred'   : 10,
+    'Barney' : 9
+}
+
+test: str = 'one'
+def mangle(arg: str) -> str:
+    global test
+    arg = 'two'
+    test = arg
+    return arg
+
+print(test)
+mangle(test)
+print(test)
