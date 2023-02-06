@@ -23,7 +23,8 @@ with open('c:/temp/t.bin', mode='rb') as file:
     file.seek(-10, 2) # move ten bytes back from the end
 
 # python mmap (memory mapped files)
-https://docs.python.org/3/library/mmap.html
+# https://docs.python.org/3/library/mmap.html
 
 # __str__() vs __repr__() / str() vs repr()
 # https://www.geeksforgeeks.org/str-vs-repr-in-python/
+
