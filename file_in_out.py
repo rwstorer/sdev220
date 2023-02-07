@@ -16,6 +16,10 @@ with open('c:/temp/t.txt', 'rt') as file:
     for line in file:
         print(line, end='')
 
+FILE_BEGIN: int = 0
+FILE_CURRENT: int = 1
+FILE_END: int = 2
+
 # binary files
 with open('c:/temp/t.bin', mode='rb') as file:
     file.seek(1, 0) # move forward one byte from the beginning

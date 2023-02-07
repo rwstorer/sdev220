@@ -17,17 +17,23 @@ a3 = A()
 
 
 class Car:
-    def __init__(self) -> None:
-        self.color: str = ''
-        self.transmission: str = 'automatic'
+    def __init__(self, color: str, transmission: str) -> None:
+        self.color: str = color
+        self.transmission: str = transmission
+
 
 class Yugo(Car):
-    def __init__(self) -> None:
-        super().__init__()
-        self.color = 'white'
-        self.transmission = 'manual'
+    def __init__(self, color: str, transmission: str, shifter) -> None:
+        super().__init__(color, transmission)
+        self.shifter: str = shifter
+
     def __str__(self) -> str:
-        return 'Color: ' + self.color + 'transmission: ' + self.transmission
+        return 'Color: ' + self.color + 'transmission: ' + self.transmission + ' shifter: ' + self.shifter
+
+
+my_yugo = Yugo('blue', 'manual', 'floor')
+
+print(my_yugo)
 
 
 
