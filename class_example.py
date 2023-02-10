@@ -74,3 +74,22 @@ class MySquare(MyShape):
 
     def __str__(self) -> str:
         return super().__str__()
+
+
+class Vehicle():
+    def __init__(self, vehicle_type: str) -> None:
+        self.vehicle_type: str = vehicle_type
+
+class Automobile(Vehicle):
+    def __init__(self,
+                 vehicle_type: str,
+                 year: int,
+                 make: str,
+                 model: str,
+                 door: int, roof: str) -> None:
+        super().__init__(vehicle_type)
+        self.year: int = year
+        self.make: str = make
+        self.model: str = model
+        self.door: int = door
+        self.roof: str = roof
