@@ -13,4 +13,4 @@ class Automobile(Vehicle):
 
 car = Automobile(vehicle_type='car')
 car.year = int(input('Enter the car year:'))
-print(f"Vechicle type: {car.vehicle_type}")
+print(f"Vehicle type: {car.vehicle_type}")
