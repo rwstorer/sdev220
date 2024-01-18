@@ -3,6 +3,7 @@
 #####
 
 def get_name() -> str:
+    # returns the user's name
     return input('Enter your name')
 
 def add_two_numbers(num1: int, num2: int) -> int:
