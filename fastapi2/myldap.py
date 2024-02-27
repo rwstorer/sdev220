@@ -25,6 +25,7 @@ class MyLDAP:
                       pool_strategy='ROUND_ROBIN',
                       exhaust=True,
                       active=True)
+        # automatically bind to port 636 on an AD server using TLS v1.2 encryption
         self.tls_conf = Tls(validate=ssl.CERT_REQUIRED, version=ssl.PROTOCOL_TLSv1_2)
         # use the currently signed in Windows user name on this read-only connection
         self.ldap_con = Connection(self.svr_pool, authentication=SASL, sasl_mechanism=GSSAPI, 

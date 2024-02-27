@@ -29,7 +29,6 @@ History:
 API_VERSION: str = '1.0'
 myad = FastAPI()
 
-# automatically bind to port 636 on an AD server using TLS v1.2 encryption
 try:
     myldap = MyLDAP(environ['LDAP_SERVERS'].split(','), environ['LDAP_BASE_DN'],
                     environ['LDAP_USER_ATTRIBUTES'].split(','), int(environ['LDAP_PAGED_SIZE']))
