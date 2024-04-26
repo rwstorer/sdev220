@@ -30,19 +30,32 @@ API_VERSION: str = '1.0'
 myad = FastAPI()
 
 try:
-    myldap = MyLDAP(environ['LDAP_SERVERS'].split(','), environ['LDAP_BASE_DN'],
-                    environ['LDAP_USER_ATTRIBUTES'].split(','), int(environ['LDAP_PAGED_SIZE']))
+    LDAP_SERVERS: list = environ['LDAP_SERVERS'].split(',')
+    LDAP_BASE_DN: str = environ['LDAP_BASE_DN']
+except KeyError:
+    print("Required environment variables:\n",
+        "'LDAP_SERVERS'--comma separated list\n",
+        "'LDAP_BASE_DN'--e.g. DC=tailspin,DC=com")
+    raise
+
+try:
+    LDAP_USER_ATTRIBUTES: list = environ['LDAP_USER_ATTRIBUTES'].split(',')
 except KeyError:
     print("Optional environment variables:\n",
           "'LDAP_USER_ATTRIBUTES'--comma separated list of LDAP user attributes\n"
           "'LDAP_PAGED_SIZE'--an integer for the LDAP search page size")
-    try:
-        myldap = MyLDAP(environ['LDAP_SERVERS'].split(','), environ['LDAP_BASE_DN'])
-    except KeyError:
-        print("Required environment variables:\n",
-            "'LDAP_SERVERS'--comma separated list\n",
-            "'LDAP_BASE_DN'--e.g. DC=tailspin,DC=com")
-        raise
+
+try:
+    LDAP_PAGED_SIZE: int = int(environ['LDAP_PAGED_SIZE'])
+except KeyError:
+    print("Optional environment variables:\n",
+          "'LDAP_USER_ATTRIBUTES'--comma separated list of LDAP user attributes\n"
+          "'LDAP_PAGED_SIZE'--an integer for the LDAP search page size")
+except (TypeError, ValueError):
+    print('The LDAP_PAGED_SIZE environment variable does not contain an integer.')
+    raise
+
+myldap:MyLDAP = MyLDAP(LDAP_SERVERS, LDAP_BASE_DN, LDAP_USER_ATTRIBUTES, LDAP_PAGED_SIZE)
 
 @myad.get("/")
 def read_root():
