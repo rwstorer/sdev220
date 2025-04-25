@@ -32,3 +32,12 @@ with open('c:/temp/t.bin', mode='rb') as file:
 # __str__() vs __repr__() / str() vs repr()
 # https://www.geeksforgeeks.org/str-vs-repr-in-python/
 
+try:
+    file = open("file_name.txt", "rt")
+    print(file.readline())
+except FileNotFoundError:
+    print("I didn't find the file")
+    raise
+finally:
+    if file:
+        file.close()
