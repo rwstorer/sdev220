@@ -15,9 +15,8 @@ while last_name != SENTINEL:
     last_name = input('Enter last name (ZZZ to quit):')
     if last_name == SENTINEL:
         break
-    gpa = input('Enter student GPA:')
     try:
-        gpa = float(gpa)
+        gpa = float(input('Enter student GPA:'))
     except ValueError:
         continue
     if gpa >= DEANS_LIST:
