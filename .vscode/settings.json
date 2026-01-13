@@ -6,5 +6,6 @@
         "Harpo",
         "ival",
         "toons"
-    ]
+    ],
+    "postman.settings.dotenv-detection-notification-visibility": false
 }
